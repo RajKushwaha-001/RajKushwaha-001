@@ -1,0 +1,84 @@
+<svg width="100%" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#0d1321"/>
+    </linearGradient>
+    <linearGradient id="topf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2a44"/>
+      <stop offset="100%" stop-color="#141b2e"/>
+    </linearGradient>
+    <linearGradient id="leftf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e2a28"/>
+      <stop offset="100%" stop-color="#0a1f1e"/>
+    </linearGradient>
+    <linearGradient id="rightf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#102b2a"/>
+      <stop offset="100%" stop-color="#0a1f1e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e6d8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00e6d8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1a2236" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#grid)" opacity="0.5"/>
+  <circle cx="230" cy="170" r="220" fill="url(#glow)"/>
+
+  <!-- isometric cube -->
+  <g transform="translate(230,170)">
+    <polygon points="0,-100 100,-50 0,0 -100,-50" fill="url(#topf)" stroke="#3a4a72" stroke-width="1"/>
+    <polygon points="-100,-50 0,0 0,120 -100,70" fill="url(#leftf)" stroke="#1d9e75" stroke-width="1"/>
+    <polygon points="100,-50 0,0 0,120 100,70" fill="url(#rightf)" stroke="#1d9e75" stroke-width="1"/>
+
+    <!-- top face circuitry -->
+    <circle cx="0" cy="-50" r="4" fill="#00e6d8"/>
+    <circle cx="-40" cy="-70" r="2.5" fill="#5b6a92"/>
+    <circle cx="40" cy="-70" r="2.5" fill="#5b6a92"/>
+    <circle cx="-40" cy="-28" r="2.5" fill="#5b6a92"/>
+    <circle cx="40" cy="-28" r="2.5" fill="#5b6a92"/>
+    <line x1="0" y1="-50" x2="-40" y2="-70" stroke="#2e3a5c" stroke-width="1"/>
+    <line x1="0" y1="-50" x2="40" y2="-70" stroke="#2e3a5c" stroke-width="1"/>
+    <line x1="0" y1="-50" x2="-40" y2="-28" stroke="#2e3a5c" stroke-width="1"/>
+    <line x1="0" y1="-50" x2="40" y2="-28" stroke="#2e3a5c" stroke-width="1"/>
+
+    <!-- left face: code lines -->
+    <line x1="-82" y1="0" x2="-25" y2="-18" stroke="#1d9e75" stroke-width="2" opacity="0.8"/>
+    <line x1="-82" y1="20" x2="-42" y2="7" stroke="#1d9e75" stroke-width="2" opacity="0.5"/>
+    <line x1="-82" y1="40" x2="-15" y2="20" stroke="#1d9e75" stroke-width="2" opacity="0.8"/>
+    <line x1="-82" y1="60" x2="-35" y2="44" stroke="#1d9e75" stroke-width="2" opacity="0.5"/>
+
+    <!-- right face: code lines -->
+    <line x1="25" y1="-18" x2="82" y2="0" stroke="#5dcaa5" stroke-width="2" opacity="0.7"/>
+    <line x1="42" y1="7" x2="82" y2="20" stroke="#5dcaa5" stroke-width="2" opacity="0.45"/>
+    <line x1="15" y1="20" x2="82" y2="40" stroke="#5dcaa5" stroke-width="2" opacity="0.7"/>
+    <line x1="35" y1="44" x2="82" y2="60" stroke="#5dcaa5" stroke-width="2" opacity="0.45"/>
+
+    <!-- edge highlight -->
+    <line x1="0" y1="0" x2="0" y2="120" stroke="#00e6d8" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- terminal panel -->
+  <g transform="translate(480,55)">
+    <rect width="650" height="210" rx="10" fill="#0c1422" stroke="#22304a" stroke-width="1"/>
+    <rect width="650" height="30" rx="10" fill="#101b2d"/>
+    <rect width="650" height="15" y="15" fill="#101b2d"/>
+    <circle cx="20" cy="15" r="5" fill="#ff5f56"/>
+    <circle cx="38" cy="15" r="5" fill="#ffbd2e"/>
+    <circle cx="56" cy="15" r="5" fill="#27c93f"/>
+    <text x="325" y="20" text-anchor="middle" font-family="monospace" font-size="12" fill="#5b6a92">raj@dev-machine: ~</text>
+
+    <text x="24" y="62" font-family="monospace" font-size="15" fill="#00e6d8">$ whoami</text>
+    <text x="24" y="86" font-family="monospace" font-size="15" fill="#e6edf3">Raj Kushwaha — MERN Stack Developer</text>
+
+    <text x="24" y="116" font-family="monospace" font-size="15" fill="#00e6d8">$ focus</text>
+    <text x="24" y="140" font-family="monospace" font-size="14" fill="#9aa7c7">Backend engineering · REST APIs · scalable systems</text>
+
+    <text x="24" y="170" font-family="monospace" font-size="15" fill="#00e6d8">$ status</text>
+    <text x="24" y="194" font-family="monospace" font-size="14" fill="#5dcaa5">building in production · open to collaborate ▌</text>
+  </g>
+</svg>
